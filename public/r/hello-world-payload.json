@@ -1,0 +1,27 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "hello-world-payload",
+  "type": "registry:component",
+  "title": "Hello World Payload Block",
+  "description": "A Payload CMS block component with both component.tsx and config.ts files.",
+  "dependencies": [
+    "payload"
+  ],
+  "registryDependencies": [
+    "button"
+  ],
+  "files": [
+    {
+      "path": "registry/new-york/payload-blocks/hello-world/component.tsx",
+      "content": "import { Button } from \"@/registry/new-york/ui/button\";\nimport type { HelloWorldBlock } from \"@/payload-types\";\n\nexport function HelloWorldPayload({\n  title,\n  content,\n  buttonText,\n}: HelloWorldBlock) {\n  return (\n    <div className=\"p-6 border rounded-lg\">\n      <h2 className=\"text-xl font-semibold mb-4\">{title}</h2>\n      <p className=\"text-muted-foreground mb-4\">{content}</p>\n      <Button>{buttonText}</Button>\n    </div>\n  );\n}\n",
+      "type": "registry:block",
+      "target": "@/blocks/hello-world/component.tsx"
+    },
+    {
+      "path": "registry/new-york/payload-blocks/hello-world/config.ts",
+      "content": "import type { Block } from 'payload'\n\nexport const HelloWorldBlock: Block = {\n  slug: 'hello-world',\n  interfaceName: 'HelloWorldBlock',\n  fields: [\n    {\n      name: 'title',\n      type: 'text',\n      required: true,\n      defaultValue: 'Hello World Payload Block',\n    },\n    {\n      name: 'content',\n      type: 'text',\n      required: false,\n      defaultValue: 'This is a payload block component with both component.tsx and config.ts files.',\n    },\n    {\n      name: 'buttonText',\n      type: 'text',\n      required: false,\n      defaultValue: 'Click me',\n    },\n  ],\n}",
+      "type": "registry:block",
+      "target": "@/blocks/hello-world/config.ts"
+    }
+  ]
+}
