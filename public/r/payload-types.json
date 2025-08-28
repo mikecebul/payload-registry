@@ -1,0 +1,15 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "payload-types",
+  "type": "registry:lib",
+  "title": "Payload Types",
+  "description": "TypeScript type definitions for PayloadCMS blocks.",
+  "files": [
+    {
+      "path": "registry/new-york/lib/types/payload-types.ts",
+      "content": "export interface HelloWorldBlock {\n  blockType: \"hello-world\";\n  title?: string;\n  content?: string;\n  buttonText?: string;\n  id?: string;\n}\n",
+      "type": "registry:file",
+      "target": "lib/types/payload-types.ts"
+    }
+  ]
+}

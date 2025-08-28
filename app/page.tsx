@@ -1,6 +1,6 @@
 import * as React from "react";
-import { OpenInV0Button } from "@/components/open-in-v0-button";
-import { HelloWorldBloack } from "@/registry/new-york/blocks/hello-world/component";
+import { OpenInV0Button } from "@/registry/new-york/components/open-in-v0-button";
+import { HelloWorldBlock } from "@/registry/new-york/blocks/hello-world/component";
 // This page displays items from the custom registry.
 // You are free to implement this with your own design as needed.
 
@@ -19,10 +19,10 @@ export default function Home() {
             <h2 className="text-sm text-muted-foreground sm:pl-3">
               A Payload CMS block component
             </h2>
-            <OpenInV0Button name="hello-world" className="w-fit" />
+            <OpenInV0Button name="hello-world-demo" className="w-fit" />
           </div>
           <div className="flex items-center justify-center min-h-[400px] relative">
-            <HelloWorldBloack
+            <HelloWorldBlock
               title="Hello World Payload Block"
               content="This is a payload block component with both component.tsx and config.ts files."
               buttonText="Click me"

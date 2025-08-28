@@ -22,6 +22,47 @@
           "target": "blocks/HelloWorld/config.ts"
         }
       ]
+    },
+    {
+      "name": "payload-types",
+      "type": "registry:lib",
+      "title": "Payload Types",
+      "description": "TypeScript type definitions for PayloadCMS blocks.",
+      "files": [
+        {
+          "path": "registry/new-york/lib/types/payload-types.ts",
+          "type": "registry:file",
+          "target": "lib/types/payload-types.ts"
+        }
+      ]
+    },
+    {
+      "name": "blocks-renderer",
+      "type": "registry:component",
+      "title": "Blocks Renderer",
+      "description": "A component to render PayloadCMS blocks dynamically.",
+      "registryDependencies": ["@payload/hello-world", "@payload/payload-types"],
+      "files": [
+        {
+          "path": "registry/new-york/components/blocks-renderer.tsx",
+          "type": "registry:file",
+          "target": "components/blocks-renderer.tsx"
+        }
+      ]
+    },
+    {
+      "name": "hello-world-demo",
+      "type": "registry:page",
+      "title": "Hello World Demo Page",
+      "description": "A demo page showcasing PayloadCMS blocks with sample data.",
+      "registryDependencies": ["@payload/blocks-renderer", "@payload/payload-types"],
+      "files": [
+        {
+          "path": "registry/new-york/pages/hello-world-demo.tsx",
+          "type": "registry:file",
+          "target": "pages/hello-world-demo.tsx"
+        }
+      ]
     }
   ]
 }
