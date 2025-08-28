@@ -4,6 +4,9 @@
   "type": "registry:component",
   "title": "Blocks Renderer",
   "description": "A component to render PayloadCMS blocks dynamically.",
+  "registryDependencies": [
+    "https://payload.mikecebul.com/r/hello-world.json"
+  ],
   "files": [
     {
       "path": "registry/new-york/components/blocks-renderer.tsx",
