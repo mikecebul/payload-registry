@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "hello-world-demo",
-  "type": "registry:page",
+  "type": "registry:block",
   "title": "Hello World Demo Page",
   "description": "A demo page showcasing PayloadCMS blocks with sample data.",
   "registryDependencies": [
@@ -13,8 +13,8 @@
     {
       "path": "registry/new-york/pages/hello-world-demo.tsx",
       "content": "import { BlocksRenderer } from \"@/registry/new-york/components/blocks-renderer\";\nimport type { HelloWorldBlock } from \"@/registry/new-york/lib/payload-types\";\n\n// Sample data - replace this with actual PayloadCMS data fetching\nconst sampleBlocks: HelloWorldBlock[] = [\n  {\n    blockType: \"hello-world\",\n    title: \"Welcome to PayloadCMS Blocks\",\n    content:\n      \"This is your HelloWorld block component working perfectly with the configuration.\",\n    buttonText: \"Get Started\",\n    id: \"1\",\n  },\n  {\n    blockType: \"hello-world\",\n    title: \"Another Block Instance\",\n    content:\n      \"You can have multiple instances of the same block with different content.\",\n    buttonText: \"Learn More\",\n    id: \"2\",\n  },\n];\n\nexport default function HelloWorldDemoPage() {\n  return (\n    <main className=\"container mx-auto py-8 px-4\">\n      <div className=\"max-w-4xl mx-auto\">\n        <h1 className=\"text-3xl font-bold mb-8 text-center\">\n          PayloadCMS Blocks Demo\n        </h1>\n        <BlocksRenderer blocks={sampleBlocks} />\n      </div>\n    </main>\n  );\n}\n",
-      "type": "registry:file",
-      "target": "pages/hello-world-demo.tsx"
+      "type": "registry:page",
+      "target": "app/page.tsx"
     }
   ]
 }
