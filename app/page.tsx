@@ -26,6 +26,7 @@ export default function Home() {
               title="Hello World Payload Block"
               content="This is a payload block component with both component.tsx and config.ts files."
               buttonText="Click me"
+              blockType="hello-world"
             />
           </div>
         </div>
