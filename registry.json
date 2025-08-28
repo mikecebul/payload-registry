@@ -53,7 +53,7 @@
       "type": "registry:page",
       "title": "Hello World Demo Page",
       "description": "A demo page showcasing PayloadCMS blocks with sample data.",
-      "registryDependencies": ["https://payload.mikecebul.com/r/blocks-renderer", "https://payload.mikecebul.com/r/payload-types"],
+      "registryDependencies": ["https://payload.mikecebul.com/r/blocks-renderer.json", "https://payload.mikecebul.com/r/payload-types.json"],
       "files": [
         {
           "path": "registry/new-york/pages/hello-world-demo.tsx",
