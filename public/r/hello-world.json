@@ -4,9 +4,6 @@
   "type": "registry:block",
   "title": "Hello World Payload Block",
   "description": "A Payload CMS block component with both component.tsx and config.ts files.",
-  "dependencies": [
-    "payload"
-  ],
   "registryDependencies": [
     "button",
     "utils"
