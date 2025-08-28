@@ -28,4 +28,4 @@ jobs:
             mikecebul/payload-registry:latest
           platforms: linux/amd64
           build-args: |
-            NEXT_PUBLIC_BASE_URL=${{ secrets.NEXT_PUBLIC_BASE_URL }}
+            NEXT_PUBLIC_BASE_URL=${{ vars.NEXT_PUBLIC_BASE_URL }}
