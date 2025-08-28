@@ -4,9 +4,6 @@
   "type": "registry:item",
   "title": "Hello World Demo Page",
   "description": "A demo page showcasing PayloadCMS blocks with sample data.",
-  "registryDependencies": [
-    "https://payload.mikecebul.com/r/hello-world.json"
-  ],
   "files": [
     {
       "path": "registry/new-york/blocks/hello-world-demo/page.tsx",
@@ -23,6 +20,18 @@
       "path": "registry/new-york/blocks/hello-world-demo/components/blocks-renderer.tsx",
       "content": "import { HelloWorldBlock } from \"@/registry/new-york/blocks/hello-world/component\";\nimport type { HelloWorldType } from \"@/registry/new-york/blocks/hello-world-demo/lib/payload-types\";\n\nexport function BlocksRenderer({ blocks }: { blocks: HelloWorldType[] }) {\n  return (\n    <div className=\"space-y-8\">\n      {blocks.map((block, index) => {\n        switch (block.blockType) {\n          case \"hello-world\":\n            return (\n              <HelloWorldBlock\n                key={block.id || index}\n                title={block.title}\n                content={block.content}\n                buttonText={block.buttonText}\n                blockType=\"hello-world\"\n              />\n            );\n          default:\n            return null;\n        }\n      })}\n    </div>\n  );\n}\n",
       "type": "registry:component"
+    },
+    {
+      "path": "registry/new-york/blocks/hello-world-demo/blocks/hello-world/component.tsx",
+      "content": "import { Button } from \"@/registry/new-york/ui/button\";\nimport type { HelloWorldType } from \"@/registry/new-york/blocks/hello-world-demo/lib/payload-types\";\n\nexport function HelloWorldBlock({\n  title,\n  content,\n  buttonText,\n}: HelloWorldType) {\n  return (\n    <div className=\"p-6 border rounded-lg\">\n      <h2 className=\"text-xl font-semibold mb-4\">{title}</h2>\n      <p className=\"text-muted-foreground mb-4\">{content}</p>\n      <Button>{buttonText}</Button>\n    </div>\n  );\n}\n",
+      "type": "registry:file",
+      "target": "blocks/HelloWorld/component.tsx"
+    },
+    {
+      "path": "registry/new-york/blocks/hello-world-demo/blocks/hello-world/config.ts",
+      "content": "export const HelloWorld: any = {\n  slug: \"hello-world\",\n  interfaceName: \"HelloWorldBlock\",\n  fields: [\n    {\n      name: \"title\",\n      type: \"text\",\n      required: true,\n      defaultValue: \"Hello World Payload Block\",\n    },\n    {\n      name: \"content\",\n      type: \"text\",\n      required: false,\n      defaultValue:\n        \"This is a payload block component with both component.tsx and config.ts files.\",\n    },\n    {\n      name: \"buttonText\",\n      type: \"text\",\n      required: false,\n      defaultValue: \"Click me\",\n    },\n  ],\n};\n",
+      "type": "registry:file",
+      "target": "blocks/HelloWorld/config.ts"
     }
   ]
 }
