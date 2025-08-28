@@ -1,4 +1,4 @@
-import { HelloWorldBlock } from "@/registry/new-york/blocks/hello-world/component";
+import { HelloWorldBlock } from "@/registry/new-york/blocks/hello-world-demo/blocks/hello-world/component";
 import type { HelloWorldType } from "@/registry/new-york/blocks/hello-world-demo/lib/payload-types";
 
 export function BlocksRenderer({ blocks }: { blocks: HelloWorldType[] }) {
