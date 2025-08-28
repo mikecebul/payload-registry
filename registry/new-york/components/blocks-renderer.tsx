@@ -17,6 +17,7 @@ export function BlocksRenderer({ blocks }: BlocksRendererProps) {
                 title={block.title}
                 content={block.content}
                 buttonText={block.buttonText}
+                blockType="hello-world"
               />
             );
           default:

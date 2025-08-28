@@ -5,7 +5,7 @@ export function HelloWorldBlock({
   title,
   content,
   buttonText,
-}: Omit<HelloWorldBlockType, "blockType" | "id">) {
+}: HelloWorldBlockType) {
   return (
     <div className="p-6 border rounded-lg">
       <h2 className="text-xl font-semibold mb-4">{title}</h2>
