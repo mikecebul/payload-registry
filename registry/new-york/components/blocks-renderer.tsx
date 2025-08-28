@@ -1,5 +1,5 @@
 import { HelloWorldBlock } from "@/registry/new-york/blocks/hello-world/component";
-import type { HelloWorldBlock as HelloWorldBlockType } from "@/registry/new-york/lib/types/payload-types";
+import type { HelloWorldBlock as HelloWorldBlockType } from "@/registry/new-york/lib/payload-types";
 
 interface BlocksRendererProps {
   blocks: HelloWorldBlockType[];

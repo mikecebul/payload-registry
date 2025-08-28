@@ -30,9 +30,8 @@
       "description": "TypeScript type definitions for PayloadCMS blocks.",
       "files": [
         {
-          "path": "registry/new-york/lib/types/payload-types.ts",
-          "type": "registry:file",
-          "target": "lib/types/payload-types.ts"
+          "path": "registry/new-york/lib/payload-types.ts",
+          "type": "registry:lib"
         }
       ]
     },
@@ -53,7 +52,7 @@
       "type": "registry:page",
       "title": "Hello World Demo Page",
       "description": "A demo page showcasing PayloadCMS blocks with sample data.",
-      "registryDependencies": ["https://payload.mikecebul.com/r/blocks-renderer.json", "https://payload.mikecebul.com/r/payload-types.json"],
+      "registryDependencies": ["https://payload.mikecebul.com/r/hello-world.json", "https://payload.mikecebul.com/r/blocks-renderer.json", "https://payload.mikecebul.com/r/payload-types.json"],
       "files": [
         {
           "path": "registry/new-york/pages/hello-world-demo.tsx",
