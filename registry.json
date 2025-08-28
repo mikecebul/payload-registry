@@ -49,7 +49,7 @@
     },
     {
       "name": "hello-world-demo",
-      "type": "registry:block",
+      "type": "registry:page",
       "title": "Hello World Demo Page",
       "description": "A demo page showcasing PayloadCMS blocks with sample data.",
       "registryDependencies": ["https://payload.mikecebul.com/r/hello-world.json", "https://payload.mikecebul.com/r/blocks-renderer.json", "https://payload.mikecebul.com/r/payload-types.json"],

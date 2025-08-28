@@ -7,7 +7,7 @@
   "files": [
     {
       "path": "registry/new-york/lib/payload-types.ts",
-      "content": "export interface HelloWorldBlock {\n  blockType: \"hello-world\";\n  title?: string;\n  content?: string;\n  buttonText?: string;\n  id?: string;\n}\n",
+      "content": "export interface HelloWorldType {\n  blockType: \"hello-world\";\n  title?: string;\n  content?: string;\n  buttonText?: string;\n  id?: string;\n}\n",
       "type": "registry:lib"
     }
   ]

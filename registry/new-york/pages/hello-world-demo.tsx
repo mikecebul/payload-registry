@@ -1,8 +1,8 @@
 import { BlocksRenderer } from "@/registry/new-york/components/blocks-renderer";
-import type { HelloWorldBlock } from "@/registry/new-york/lib/payload-types";
+import type { HelloWorldType } from "@/registry/new-york/lib/payload-types";
 
 // Sample data - replace this with actual PayloadCMS data fetching
-const sampleBlocks: HelloWorldBlock[] = [
+const sampleBlocks: HelloWorldType[] = [
   {
     blockType: "hello-world",
     title: "Welcome to PayloadCMS Blocks",

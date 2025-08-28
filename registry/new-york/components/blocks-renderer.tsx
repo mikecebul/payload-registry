@@ -1,11 +1,7 @@
 import { HelloWorldBlock } from "@/registry/new-york/blocks/hello-world/component";
-import type { HelloWorldBlock as HelloWorldBlockType } from "@/registry/new-york/lib/payload-types";
+import type { HelloWorldType } from "@/registry/new-york/lib/payload-types";
 
-interface BlocksRendererProps {
-  blocks: HelloWorldBlockType[];
-}
-
-export function BlocksRenderer({ blocks }: BlocksRendererProps) {
+export function BlocksRenderer({ blocks }: {blocks: HelloWorldType[]}) {
   return (
     <div className="space-y-8">
       {blocks.map((block, index) => {
