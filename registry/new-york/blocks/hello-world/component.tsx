@@ -1,11 +1,11 @@
 import { Button } from "@/registry/new-york/ui/button";
-import type { HelloWorldBlock } from "@/payload-types";
+import type { HelloWorldBlock as HelloWorldBlockType } from "@/payload-types";
 
-export function HelloWorldPayload({
+export function HelloWorldBloack({
   title,
   content,
   buttonText,
-}: HelloWorldBlock) {
+}: HelloWorldBlockType) {
   return (
     <div className="p-6 border rounded-lg">
       <h2 className="text-xl font-semibold mb-4">{title}</h2>

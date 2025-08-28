@@ -21,3 +21,6 @@ This is a template for creating a custom registry using Next.js.
 ## Documentation
 
 Visit the [shadcn documentation](https://ui.shadcn.com/docs/registry) to view the full documentation.
+
+## Test it out
+`pnpm dlx shadcn@latest add http://localhost:3000/r/hello-world.json`
