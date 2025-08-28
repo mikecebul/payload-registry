@@ -44,12 +44,12 @@
         {
           "path": "registry/new-york/blocks/hello-world-demo/blocks/hello-world/component.tsx",
           "type": "registry:component",
-          "target": "blocks/HelloWorld/component.tsx"
+          "target": "blocks/hello-world/component.tsx"
         },
         {
           "path": "registry/new-york/blocks/hello-world-demo/blocks/hello-world/config.ts",
           "type": "registry:component",
-          "target": "blocks/HelloWorld/config.ts"
+          "target": "blocks/hello-world/config.ts"
         }
       ]
     }
