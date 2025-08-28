@@ -11,7 +11,7 @@
   "files": [
     {
       "path": "registry/new-york/blocks/hello-world/component.tsx",
-      "content": "import { Button } from \"@/registry/new-york/ui/button\";\nimport type { HelloWorldType } from \"@/registry/new-york/lib/payload-types\";\n\nexport function HelloWorldBlock({\n  title,\n  content,\n  buttonText,\n}: HelloWorldType) {\n  return (\n    <div className=\"p-6 border rounded-lg\">\n      <h2 className=\"text-xl font-semibold mb-4\">{title}</h2>\n      <p className=\"text-muted-foreground mb-4\">{content}</p>\n      <Button>{buttonText}</Button>\n    </div>\n  );\n}\n",
+      "content": "import { Button } from \"@/components/ui/button\";\nimport type { HelloWorldType } from \"@/registry/new-york/blocks/hello-world-demo/lib/payload-types\";\n\nexport function HelloWorldBlock({\n  title,\n  content,\n  buttonText,\n}: HelloWorldType) {\n  return (\n    <div className=\"p-6 border rounded-lg\">\n      <h2 className=\"text-xl font-semibold mb-4\">{title}</h2>\n      <p className=\"text-muted-foreground mb-4\">{content}</p>\n      <Button>{buttonText}</Button>\n    </div>\n  );\n}\n",
       "type": "registry:file",
       "target": "blocks/HelloWorld/component.tsx"
     },

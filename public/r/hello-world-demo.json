@@ -1,20 +1,28 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "hello-world-demo",
-  "type": "registry:page",
+  "type": "registry:item",
   "title": "Hello World Demo Page",
   "description": "A demo page showcasing PayloadCMS blocks with sample data.",
   "registryDependencies": [
-    "https://payload.mikecebul.com/r/hello-world.json",
-    "https://payload.mikecebul.com/r/blocks-renderer.json",
-    "https://payload.mikecebul.com/r/payload-types.json"
+    "https://payload.mikecebul.com/r/hello-world.json"
   ],
   "files": [
     {
-      "path": "registry/new-york/pages/hello-world-demo.tsx",
-      "content": "import { BlocksRenderer } from \"@/registry/new-york/components/blocks-renderer\";\nimport type { HelloWorldType } from \"@/registry/new-york/lib/payload-types\";\n\n// Sample data - replace this with actual PayloadCMS data fetching\nconst sampleBlocks: HelloWorldType[] = [\n  {\n    blockType: \"hello-world\",\n    title: \"Welcome to PayloadCMS Blocks\",\n    content:\n      \"This is your HelloWorld block component working perfectly with the configuration.\",\n    buttonText: \"Get Started\",\n    id: \"1\",\n  },\n  {\n    blockType: \"hello-world\",\n    title: \"Another Block Instance\",\n    content:\n      \"You can have multiple instances of the same block with different content.\",\n    buttonText: \"Learn More\",\n    id: \"2\",\n  },\n];\n\nexport default function HelloWorldDemoPage() {\n  return (\n    <main className=\"container mx-auto py-8 px-4\">\n      <div className=\"max-w-4xl mx-auto\">\n        <h1 className=\"text-3xl font-bold mb-8 text-center\">\n          PayloadCMS Blocks Demo\n        </h1>\n        <BlocksRenderer blocks={sampleBlocks} />\n      </div>\n    </main>\n  );\n}\n",
+      "path": "registry/new-york/blocks/hello-world-demo/page.tsx",
+      "content": "import { BlocksRenderer } from \"@/registry/new-york/blocks/hello-world-demo/components/blocks-renderer\";\nimport type { HelloWorldType } from \"@/registry/new-york/blocks/hello-world-demo/lib/payload-types\";\n\n// Sample data - replace this with actual PayloadCMS data fetching\nconst sampleBlocks: HelloWorldType[] = [\n  {\n    blockType: \"hello-world\",\n    title: \"Welcome to PayloadCMS Blocks\",\n    content:\n      \"This is your HelloWorld block component working perfectly with the configuration.\",\n    buttonText: \"Get Started\",\n    id: \"1\",\n  },\n  {\n    blockType: \"hello-world\",\n    title: \"Another Block Instance\",\n    content:\n      \"You can have multiple instances of the same block with different content.\",\n    buttonText: \"Learn More\",\n    id: \"2\",\n  },\n];\n\nexport default function Page() {\n  return (\n    <main className=\"container mx-auto py-8 px-4\">\n      <div className=\"max-w-4xl mx-auto\">\n        <h1 className=\"text-3xl font-bold mb-8 text-center\">\n          PayloadCMS Blocks Demo\n        </h1>\n        <BlocksRenderer blocks={sampleBlocks} />\n      </div>\n    </main>\n  );\n}\n",
       "type": "registry:page",
       "target": "app/page.tsx"
+    },
+    {
+      "path": "registry/new-york/blocks/hello-world-demo/lib/payload-types.ts",
+      "content": "export interface HelloWorldType {\n  blockType: \"hello-world\";\n  title?: string;\n  content?: string;\n  buttonText?: string;\n  id?: string;\n}\n",
+      "type": "registry:lib"
+    },
+    {
+      "path": "registry/new-york/blocks/hello-world-demo/components/blocks-renderer.tsx",
+      "content": "import { HelloWorldBlock } from \"@/registry/new-york/blocks/hello-world/component\";\nimport type { HelloWorldType } from \"@/registry/new-york/blocks/hello-world-demo/lib/payload-types\";\n\nexport function BlocksRenderer({ blocks }: { blocks: HelloWorldType[] }) {\n  return (\n    <div className=\"space-y-8\">\n      {blocks.map((block, index) => {\n        switch (block.blockType) {\n          case \"hello-world\":\n            return (\n              <HelloWorldBlock\n                key={block.id || index}\n                title={block.title}\n                content={block.content}\n                buttonText={block.buttonText}\n                blockType=\"hello-world\"\n              />\n            );\n          default:\n            return null;\n        }\n      })}\n    </div>\n  );\n}\n",
+      "type": "registry:component"
     }
   ]
 }

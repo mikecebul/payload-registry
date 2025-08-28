@@ -1,5 +1,5 @@
-import { BlocksRenderer } from "@/registry/new-york/components/blocks-renderer";
-import type { HelloWorldType } from "@/registry/new-york/lib/payload-types";
+import { BlocksRenderer } from "@/registry/new-york/blocks/hello-world-demo/components/blocks-renderer";
+import type { HelloWorldType } from "@/registry/new-york/blocks/hello-world-demo/lib/payload-types";
 
 // Sample data - replace this with actual PayloadCMS data fetching
 const sampleBlocks: HelloWorldType[] = [
@@ -21,7 +21,7 @@ const sampleBlocks: HelloWorldType[] = [
   },
 ];
 
-export default function HelloWorldDemoPage() {
+export default function Page() {
   return (
     <main className="container mx-auto py-8 px-4">
       <div className="max-w-4xl mx-auto">

@@ -1,5 +1,5 @@
-import { Button } from "@/registry/new-york/ui/button";
-import type { HelloWorldType } from "@/registry/new-york/lib/payload-types";
+import { Button } from "@/components/ui/button";
+import type { HelloWorldType } from "@/registry/new-york/blocks/hello-world-demo/lib/payload-types";
 
 export function HelloWorldBlock({
   title,
