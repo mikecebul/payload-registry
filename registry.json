@@ -41,12 +41,10 @@
       "type": "registry:component",
       "title": "Blocks Renderer",
       "description": "A component to render PayloadCMS blocks dynamically.",
-      "registryDependencies": ["@payload/hello-world", "@payload/payload-types"],
       "files": [
         {
           "path": "registry/new-york/components/blocks-renderer.tsx",
-          "type": "registry:file",
-          "target": "components/blocks-renderer.tsx"
+          "type": "registry:component"
         }
       ]
     },
@@ -55,7 +53,7 @@
       "type": "registry:page",
       "title": "Hello World Demo Page",
       "description": "A demo page showcasing PayloadCMS blocks with sample data.",
-      "registryDependencies": ["@payload/blocks-renderer", "@payload/payload-types"],
+      "registryDependencies": ["https://payload.mikecebul.com/r/blocks-renderer", "https://payload.mikecebul.com/r/payload-types"],
       "files": [
         {
           "path": "registry/new-york/pages/hello-world-demo.tsx",
