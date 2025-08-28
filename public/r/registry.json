@@ -52,12 +52,22 @@
       "type": "registry:block",
       "title": "Hello World Demo Page",
       "description": "A demo page showcasing PayloadCMS blocks with sample data.",
-      "registryDependencies": ["https://payload.mikecebul.com/r/hello-world.json", "https://payload.mikecebul.com/r/blocks-renderer.json", "https://payload.mikecebul.com/r/payload-types.json"],
+      "registryDependencies": ["button", "utils", "https://payload.mikecebul.com/r/hello-world.json", "https://payload.mikecebul.com/r/blocks-renderer.json", "https://payload.mikecebul.com/r/payload-types.json"],
       "files": [
         {
           "path": "registry/new-york/pages/hello-world-demo.tsx",
           "type": "registry:page",
           "target": "app/page.tsx"
+        },
+        {
+          "path": "registry/new-york/blocks/hello-world/component.tsx",
+          "type": "registry:file",
+          "target": "blocks/HelloWorld/component.tsx"
+        },
+        {
+          "path": "registry/new-york/blocks/hello-world/config.ts",
+          "type": "registry:file",
+          "target": "blocks/HelloWorld/config.ts"
         }
       ]
     }

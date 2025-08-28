@@ -5,6 +5,8 @@
   "title": "Hello World Demo Page",
   "description": "A demo page showcasing PayloadCMS blocks with sample data.",
   "registryDependencies": [
+    "button",
+    "utils",
     "https://payload.mikecebul.com/r/hello-world.json",
     "https://payload.mikecebul.com/r/blocks-renderer.json",
     "https://payload.mikecebul.com/r/payload-types.json"
@@ -15,6 +17,18 @@
       "content": "import { BlocksRenderer } from \"@/registry/new-york/components/blocks-renderer\";\nimport type { HelloWorldBlock } from \"@/registry/new-york/lib/payload-types\";\n\n// Sample data - replace this with actual PayloadCMS data fetching\nconst sampleBlocks: HelloWorldBlock[] = [\n  {\n    blockType: \"hello-world\",\n    title: \"Welcome to PayloadCMS Blocks\",\n    content:\n      \"This is your HelloWorld block component working perfectly with the configuration.\",\n    buttonText: \"Get Started\",\n    id: \"1\",\n  },\n  {\n    blockType: \"hello-world\",\n    title: \"Another Block Instance\",\n    content:\n      \"You can have multiple instances of the same block with different content.\",\n    buttonText: \"Learn More\",\n    id: \"2\",\n  },\n];\n\nexport default function HelloWorldDemoPage() {\n  return (\n    <main className=\"container mx-auto py-8 px-4\">\n      <div className=\"max-w-4xl mx-auto\">\n        <h1 className=\"text-3xl font-bold mb-8 text-center\">\n          PayloadCMS Blocks Demo\n        </h1>\n        <BlocksRenderer blocks={sampleBlocks} />\n      </div>\n    </main>\n  );\n}\n",
       "type": "registry:page",
       "target": "app/page.tsx"
+    },
+    {
+      "path": "registry/new-york/blocks/hello-world/component.tsx",
+      "content": "import { Button } from \"@/registry/new-york/ui/button\";\nimport type { HelloWorldBlock as HelloWorldBlockType } from \"@/registry/new-york/lib/payload-types\";\n\nexport function HelloWorldBlock({\n  title,\n  content,\n  buttonText,\n}: Omit<HelloWorldBlockType, \"blockType\" | \"id\">) {\n  return (\n    <div className=\"p-6 border rounded-lg\">\n      <h2 className=\"text-xl font-semibold mb-4\">{title}</h2>\n      <p className=\"text-muted-foreground mb-4\">{content}</p>\n      <Button>{buttonText}</Button>\n    </div>\n  );\n}\n",
+      "type": "registry:file",
+      "target": "blocks/HelloWorld/component.tsx"
+    },
+    {
+      "path": "registry/new-york/blocks/hello-world/config.ts",
+      "content": "import type { Block } from 'payload'\n\nexport const HelloWorld: Block = {\n  slug: 'hello-world',\n  interfaceName: 'HelloWorldBlock',\n  fields: [\n    {\n      name: 'title',\n      type: 'text',\n      required: true,\n      defaultValue: 'Hello World Payload Block',\n    },\n    {\n      name: 'content',\n      type: 'text',\n      required: false,\n      defaultValue: 'This is a payload block component with both component.tsx and config.ts files.',\n    },\n    {\n      name: 'buttonText',\n      type: 'text',\n      required: false,\n      defaultValue: 'Click me',\n    },\n  ],\n}",
+      "type": "registry:file",
+      "target": "blocks/HelloWorld/config.ts"
     }
   ]
 }
