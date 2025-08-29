@@ -24,7 +24,7 @@
     },
     {
       "name": "hello-world-demo",
-      "type": "registry:item",
+      "type": "registry:block",
       "title": "Hello World Demo Page",
       "description": "A demo page showcasing PayloadCMS blocks with sample data.",
       "files": [

@@ -1,7 +1,7 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry-item.json",
   "name": "hello-world-demo",
-  "type": "registry:item",
+  "type": "registry:block",
   "title": "Hello World Demo Page",
   "description": "A demo page showcasing PayloadCMS blocks with sample data.",
   "files": [
@@ -18,7 +18,7 @@
     },
     {
       "path": "registry/new-york/blocks/hello-world-demo/components/blocks-renderer.tsx",
-      "content": "import { HelloWorldBlock } from \"@/registry/new-york/blocks/hello-world-demo/blocks/hello-world/component\";\nimport type { HelloWorldType } from \"@/registry/new-york/blocks/hello-world-demo/lib/payload-types\";\n\nexport function BlocksRenderer({ blocks }: { blocks: HelloWorldType[] }) {\n  return (\n    <div className=\"space-y-8\">\n      {blocks.map((block, index) => {\n        switch (block.blockType) {\n          case \"hello-world\":\n            return (\n              <HelloWorldBlock\n                key={block.id || index}\n                title={block.title}\n                content={block.content}\n                buttonText={block.buttonText}\n                blockType=\"hello-world\"\n              />\n            );\n          default:\n            return null;\n        }\n      })}\n    </div>\n  );\n}\n",
+      "content": "// @ts-nocheck\nimport { HelloWorldBlock } from \"@/blocks/hello-world/component\";\nimport type { HelloWorldType } from \"@/registry/new-york/blocks/hello-world-demo/lib/payload-types\";\n\nexport function BlocksRenderer({ blocks }: { blocks: HelloWorldType[] }) {\n  return (\n    <div className=\"space-y-8\">\n      {blocks.map((block, index) => {\n        switch (block.blockType) {\n          case \"hello-world\":\n            return (\n              <HelloWorldBlock\n                key={block.id || index}\n                title={block.title}\n                content={block.content}\n                buttonText={block.buttonText}\n                blockType=\"hello-world\"\n              />\n            );\n          default:\n            return null;\n        }\n      })}\n    </div>\n  );\n}\n",
       "type": "registry:component"
     },
     {
